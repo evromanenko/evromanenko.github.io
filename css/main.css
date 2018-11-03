@@ -38,8 +38,8 @@ a:visited {
 
 .wrapper .container, .header .container, .footer .container {
 	max-width: 100rem;
-	padding-left: 1rem;	
-	padding-right: 1rem;	
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 .wrapper {
 	/* background: linear-gradient(#c3c9cd, #dae1e5 3em, #dae1e5); */
