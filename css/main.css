@@ -1,0 +1,304 @@
+body {
+	background-color: #1c425d;
+	font-family: Verdana, Helvetica, Helvetica Neue, Arial;
+	font-size: 1.3em;
+	line-height: 2.2em;
+	margin: 0;
+}
+
+.button {
+	background-color: transparent;
+	border-color: #3ba2ce;
+	color: #3ba2ce;
+	height: 3rem;
+	line-height: 3rem;
+	padding: 0 1.0rem;
+	letter-spacing: 0;
+	margin: 2px 5px 2px 5px;
+}
+.button:before {
+	font-size:150%;
+	vertical-align: middle;
+}
+.github-button {
+	float: right;
+	line-height: 2.5rem;
+	font-size: 1.5rem;
+}
+
+a {
+	color: #3ba2ce;
+}
+a:hover {
+	color: #c48d23;
+}
+a:visited {
+	color: #247da0;
+}
+
+.wrapper .container, .header .container, .footer .container {
+	max-width: 100rem;
+	padding-left: 1rem;	
+	padding-right: 1rem;	
+}
+.wrapper {
+	/* background: linear-gradient(#c3c9cd, #dae1e5 3em, #dae1e5); */
+	background: linear-gradient(#c3c9cd, #dfe6ea 3em, #dfe6ea);
+	font-size: 1.2em;
+	/* display: block;
+	overflow: hidden;
+	position: relative;
+	width: 100%; */
+}
+.wrapper>.container {
+	padding-bottom: 2rem;
+	padding-top: 2rem;
+}
+
+.header {
+	background-color: #36637D;
+	color: white;
+	border-bottom: 1px solid #fff;
+}
+.header+section {
+	border-top: 0
+}
+.header .row {
+	background: linear-gradient(rgba(54, 99, 125, 0.8), rgba(54, 99, 125, 0.8)), url(../img/dolfin.png) right 40px top 10px no-repeat;
+}
+.header .logo {
+	max-width: 40rem
+}
+.header a.logo {
+	display: block;
+	float: left;
+	width: 128px;
+	height: 150px;
+	background-image: url(../img/evromanenko.jpg);
+	margin: 5px 10px 5px 0;
+}
+.header h3 {
+	font-weight: bold;
+	font-size: 1.18em;
+	margin: 1.8em 0 0.2em 0;
+	letter-spacing: 0;
+}
+.header p {
+	margin-bottom: 1.5rem;
+	line-height: 1.25em;
+}
+.header .row {
+	position: relative;
+}
+
+.footer {
+	background: linear-gradient(#0c1c27, #1c425d 75%, #1c425d);
+	height: 2em;
+	padding-top: 1em;
+}
+.footer a:not(.button) {
+	color: #728da0;
+	text-decoration: underline;
+}
+.footer #counter {
+	float: right;
+}
+
+nav.language-switcher {
+	position: absolute;
+	top: 0.5em;
+	right: 0;
+}
+nav.language-switcher a {
+	color: #fff;
+	padding: 0.3em;
+}
+.ru:lang(ru), .en:lang(en) {
+	background-color: #111;
+	color: #fff
+}
+
+.navigation .navigation-list {
+	float: left;
+	list-style: none;
+	margin-bottom: 0;
+	padding: 0;
+}
+.navigation .navigation-item {
+	float: left;
+	margin-bottom: 0;
+	position: relative
+}
+.navigation .navigation-item.active a {
+	color: #153c60;
+	text-shadow: 0px -1px 0px #e2e7ea;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.7);
+	background: linear-gradient(#a0afbb, white);
+}
+.navigation .navigation-link {
+	display: inline;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+	font-weight: normal;
+	line-height: 5.2rem;
+	margin-right: 5px;
+	color: white;
+	padding: 0.7rem 1rem 0.7rem 1rem;
+	text-decoration: none;
+	text-shadow: 0px -1px 0px #000;
+}
+
+/* mobile-first table styles */
+table {
+	border: 0;
+	padding-bottom: 0;
+	display: block;
+	width: 100%;
+	color: #004;
+	font-size: 0.85em;
+	line-height: 1.4em;
+}
+tbody, tr, th, td {
+	border: 0;
+	display: block;
+	padding: 1px;
+	text-align: center;
+	white-space: normal;
+}
+thead {
+	display: none;
+}
+tr:has(th) {
+	border: 1px solid black;
+	border-left: none;
+	padding: 3px 18px 3px 10px;
+	cursor: pointer;
+}
+th:first-child {
+	padding: initial;
+}
+th:last-child {
+	padding: initial;
+}
+tr {
+	border: 1px solid #bbb;
+	padding-top: 5px;
+	vertical-align: middle;
+	position: relative;
+}
+tr:first-child {
+	border-color: black;
+}
+tr.spacer {
+	border: none;
+}
+tr.spacer td{
+	height: 5px;
+}
+tr.summary {
+	padding-top: 0;
+	border-top: none;
+}
+tr:not(.summary) td:nth-child(1), tr td:nth-child(3) {
+	font-size: 120%;
+}
+tr.summary p {
+	margin: 0;
+	line-height: 14px;
+	cursor: pointer;
+}
+tr.summary div {
+	max-height: 0;
+	overflow: hidden;
+    -webkit-transition: max-height 0.5s;
+    -moz-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+	transition-timing-function: cubic-bezier(0,1,0,1);
+}
+tr.summary div.show {
+	max-height: 2000px;
+    -webkit-transition: max-height 0.5s;
+    -moz-transition: max-height 0.5s;
+	transition: max-height 0.5s;
+	transition-timing-function: cubic-bezier(1,0,1,0);
+}
+tr.t1 {
+	background-color: #dae1ea;
+}
+tr.t0 {
+	background-color: #dfe5ef;
+}
+td:empty {
+	display: none;
+}
+
+@media (min-width: 40rem) {
+	.row {
+		flex-direction: column;
+		width: 100%;
+		margin-left: 0;
+	}
+	.row .column {
+		margin-bottom: auto;
+		padding: 0;
+	}
+	.wrapper .container, .header .container, .footer .container {
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
+	.navigation .navigation-list {
+		float: right;
+		padding: 0 10em 0 0;
+	}
+	.header .row {
+		background: linear-gradient(rgba(54, 99, 125, 0.4), rgba(54, 99, 125, 0.4)), url(../img/dolfin.png) right 40px top 10px no-repeat;
+	}
+}
+
+@media (min-width: 62rem) {
+	.row {
+		flex-direction: row;
+		margin-left: -1.0rem;
+		width: calc(100% + 2.0rem);
+	}
+	.row .column {
+		margin-bottom: inherit;
+		padding: 0 1.0rem;
+	}
+	.navigation .navigation-list {
+		padding: 8em 0 0 0;
+	}
+	.header .row {
+		background: url(../img/dolfin.png) right 40px top 10px no-repeat;
+	}
+
+	/* table styles */
+	table {
+		table-layout: fixed;
+		border-spacing: 0;
+	}
+	thead {
+		display: table-header-group;
+	}
+	tbody {
+		display: table-header-group;
+	}
+	tr {
+		display: table-row;
+	}
+	th, td {
+		display: table-cell;
+		min-width: 50px;
+		vertical-align: middle;
+		font-size: 100% !important;
+	}
+	td:empty {
+		display: table-cell;
+	}
+	td a span {
+		display: none;
+	}
+}

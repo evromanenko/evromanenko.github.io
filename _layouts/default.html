@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="{{ page.language }}">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Romanenko E.V.">
+	<meta name="description" content="{{ site.description[page.language] }}">
+	<meta name="keywords" content="{{ site.keywords[page.language] }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ page.title }} | {{ site.name[page.language] }}</title>
+	<link rel="icon" href="https://milligram.github.io/images/icon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/milligram.css">
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/fontello.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<section class="container">
+			<div class="row">
+				<nav class="language-switcher">
+				{% if page.name contains "index" %}
+					<a class="ru" href="{{ site.baseurl }}/">RU</a>
+					<a class="en" href="{{ site.baseurl | append: "/en" }}">EN</a>
+				{% else %}
+					<a class="ru" href="{{ site.baseurl | append: page.handle }}">RU</a>
+					<a class="en" href="{{ site.baseurl | append: "/en" | append: page.handle }}">EN</a>
+				{% endif %}
+				</nav>
+				<div class="column">
+					<a class="logo" href="{{ site.baseurl }}/"></a>
+					<h3>{{ site.author[page.language] }}</h3>
+					<p>{{ site.grade[page.language] }}</p>
+					<p class=email>
+						<i class="icon-mail-1"></i> <a href="mailto:evromanenko33@mail.ru">evromanenko33@mail.ru</a>
+					</p>
+				</div>
+				<div class="column">
+					<nav class="navigation">
+						<ul class="navigation-list">
+							{% assign pages = site.pages | sort: "nav-order"  %}
+							{% for p in pages %}
+								{% if p.language == page.language %}
+								<li class="navigation-item{% if page.url == p.url %} active{% endif %}">
+									<a class="navigation-link" href="{{ p.url | prepend: site.baseurl }}" title="{{ p.title }}">{{ p.title }}</a>
+								</li>
+								{% endif %}
+							{% endfor %}
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</section>
+	</header>
+	<main class="wrapper">
+		<section class="container">
+			{{ content }}
+		</section>
+	</main>
+	<footer class="footer">
+		<section class="container">
+			<a href="{{ site.url }}"><span id="year">2018</span> {{ site.name[page.language] }}</a>
+			<div id="counter">
+				<!-- Yandex.Metrika informer -->
+				<a href="https://metrika.yandex.ru/stat/?id=25641980&amp;from=informer"
+				target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/25641980/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+				style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="25641980" data-lang="ru" /></a>
+				<!-- /Yandex.Metrika informer -->
+				<!-- Yandex.Metrika counter -->
+				<script type="text/javascript" >
+					(function (d, w, c) {
+						(w[c] = w[c] || []).push(function() {
+							try {
+								w.yaCounter25641980 = new Ya.Metrika({
+									id:25641980,
+									clickmap:true,
+									trackLinks:true,
+									accurateTrackBounce:true
+								});
+							} catch(e) { }
+						});
+
+						var n = d.getElementsByTagName("script")[0],
+							s = d.createElement("script"),
+							f = function () { n.parentNode.insertBefore(s, n); };
+						s.type = "text/javascript";
+						s.async = true;
+						s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+						if (w.opera == "[object Opera]") {
+							d.addEventListener("DOMContentLoaded", f, false);
+						} else { f(); }
+					})(document, window, "yandex_metrika_callbacks");
+				</script>
+				<noscript><div><img src="https://mc.yandex.ru/watch/25641980" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+				<!-- /Yandex.Metrika counter -->
+			</div>
+			<a class="button github-button icon-github-circled" href="{{ site.github_url }}"></a>
+		</section>
+	</footer>
+
+	<script src="{{ site.baseurl }}/js/main.js"></script>
+	<script>
+		document.getElementById('year').innerHTML = (new Date()).getFullYear();
+	</script>
+</body>
+
+</html>

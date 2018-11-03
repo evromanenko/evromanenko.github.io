@@ -1,0 +1,34 @@
+{% assign content_files = site.static_files | where: "content", true %}
+<table>
+    <thead>
+       <th>{{ site.columns[page.language].year }}</th>
+       <th>{{ site.columns[page.language].coauthors }}</th>
+       <th>{{ site.columns[page.language].name }}</th>
+       <th>{{ site.columns[page.language].published }}</th>
+       <th></th>
+    </thead>
+    <tbody>
+        <tr class="spacer"><td colspan="5"></td></tr>        
+        {% for row in mydata %}
+        {% assign odd = forloop.index | modulo: 2 %}
+        <tr class="t{{ odd }}">
+            <td>{{ row.year }}</td>
+            <td>{{ row.coauthors }}</td>
+            <td>{{ row.title }}</td>
+            <td>{{ row.published }}</td>
+            <td>{% for file in content_files %}{% if file.name == row.link %}
+            <a href="{{file.path}}" class="button icon-download-cloud" title="{{ site.hints[page.language].download }}" target="_blank"><span>{{ site.hints[page.language].download }}</span></a>
+            {% endif %}{% endfor %}</td>
+        </tr>
+        {% if row.summary %}
+        <tr class="summary t{{ odd }}">
+            <td colspan="5">
+                <p class="icon-angle-double-down" title="{{ site.hints[page.language].annotation }}"></p>
+                <div>{{ row.summary }}</div>
+            </td>
+        </tr>        
+        {% endif %}
+        <tr class="spacer"><td colspan="5"></td></tr>        
+        {% endfor %}
+    </tbody>
+</table>

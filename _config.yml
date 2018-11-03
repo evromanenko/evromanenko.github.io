@@ -1,0 +1,45 @@
+url: https://evromanenko.ru
+github_url: https://github.com/evromanenko/evromanenko.github.io
+author:
+  ru: Евгений Васильевич Романенко
+  en: Evgeniy Vasilevich Romanenko
+grade:
+  ru: Доктор биологических наук,<br />кандидат физико-математических наук,<br />профессор.
+  en: Doctor of Biology,<br />Ph.D.in Physics and Maths,<br />professor.
+name: 
+  ru: Персональный сайт Е.В.Романенко
+  en: Romanenko E.V. personal website
+description: 
+  ru: Евгений Васильевич Романенко. Гидродинамика рыб и дельфинов, физическая акустика, ультразвук, биоакустика.
+  en: Evgeniy Vasilevich Romanenko. Fish and dolphin hydrodynamics, physical acoustics, ultrasound, bioacoustics.
+keywords: 
+  ru: физическая акустика, ультразвук, приемники ультразвука, нелинейные искажения волн конечной амплитуды, биоакустика, звуки рыб и дельфинов, эхо-локация, гидродинамика рыб и дельфинов, жесткое крыло, математическое моделирование хвостовой лопасти дельфина, тяга крыла, мощность, эффективность, коэффициент полезного действия крыла, индуктивное сопротивление, сопротивление формы
+  en: physical acoustics, ultrasound, ultrasound receivers, nonlinear distorsions of finite amplitude waves, bioacoustics, fish and dolphin sounds, echolocations, fish and dolphin hydrodynamics, rigid foil, mathematical modelling of dolphins tail, foils thrust , power, efficiency, inductive resistance, shape resistance
+keywords:
+  ru: физическая акустика, ультразвук, приемники ультразвука, нелинейные искажения волн конечной амплитуды, биоакустика, звуки рыб и дельфинов, эхо-локация, гидродинамика рыб и дельфинов, жесткое крыло, математическое моделирование хвостовой лопасти дельфина, тяга крыла, мощность, эффективность, коэффициент полезного действия крыла, индуктивное сопротивление, сопротивление формы
+  en: physical acoustics, ultrasound, ultrasound receivers, nonlinear distorsions of finite amplitude waves, bioacoustics, fish and dolphin sounds, echolocations, fish and dolphin hydrodynamics, rigid foil, mathematical modelling of dolphins tail, foils thrust , power, efficiency, inductive resistance, shape resistance
+columns:
+  ru:
+    year: Год
+    coauthors: Соавторы
+    name: Название работы
+    published: Где опубликовано
+  en:
+    year: Year
+    coauthors: Coauthors
+    name: Name of article
+    published: Published
+hints:
+  ru:
+    annotation: Показать/скрыть аннотацию
+    download: Скачать файл
+  en:
+    annotation: Show/hide annotation
+    download: Download file
+exclude: [README.md]
+permalink: pretty
+defaults:
+  - scope:
+      path: "content"
+    values:
+      content: true
