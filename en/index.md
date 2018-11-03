@@ -2,6 +2,7 @@
 layout: default
 title: About author
 language: en
+handle: /
 nav-order: 1
 ---
 #### Education

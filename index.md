@@ -2,6 +2,7 @@
 layout: default
 title: Об авторе
 language: ru
+handle: /
 nav-order: 1
 ---
 #### Образование
