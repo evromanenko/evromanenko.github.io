@@ -1,0 +1,14 @@
+---
+layout:
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {% for page in site.pages %}{% if page.id contains "404" %}{% else %}<url>{% assign versions=site.pages | where:"handle", page.handle %}
+        <loc>{{site.base}}{{ page.url }}</loc>
+        {% for version in versions %}
+        <xhtml:link rel="alternate" hreflang="{{ version.language }}" href="{{ site.url }}{{site.base}}{{ version.url }}" />
+        {% endfor %}
+        <changefreq>weekly</changefreq>
+      </url>{% endif %}{% endfor %}
+</urlset>
