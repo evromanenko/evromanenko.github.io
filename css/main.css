@@ -210,6 +210,10 @@ tr.summary p {
 	line-height: 14px;
 	cursor: pointer;
 }
+tr.summary p:hover {
+	background-color: #606c76;
+    color: #fff;
+}
 tr.summary div {
 	max-height: 0;
 	overflow: hidden;
