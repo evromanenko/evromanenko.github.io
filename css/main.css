@@ -24,6 +24,7 @@ body {
 	float: right;
 	line-height: 2.5rem;
 	font-size: 1.5rem;
+	margin: 0 5px 0 5px;
 }
 
 a {
@@ -211,7 +212,7 @@ tr.summary p {
 	cursor: pointer;
 }
 tr.summary p:hover {
-	background-color: #606c76;
+    background-color: #606c76;
     color: #fff;
 }
 tr.summary div {
